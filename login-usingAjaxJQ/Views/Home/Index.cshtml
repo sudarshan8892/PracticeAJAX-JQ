@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "/Views/Shared/_Mylayout.cshtml";
+}
+
+<div class="container custom-container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="form-group row  mb-3">
+                <label for="text1" class="col-sm-4 col-form-label">Label 1:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="text1">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="text2" class="col-sm-4 col-form-label">Label 2:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="text2">
+                </div>
+            </div>
+
+            <div class="col-md-12 mb-3>
+                <div class="col-sm-1 d-inline-flex">
+                    <a href="#" class="btn btn-primary mr-2" onclick="sub()">Subtraction</a>
+                    <a href="#" class="btn btn-primary mr-2" onclick="totalsum()">Sum</a>
+                    <a href="#" class="btn btn-primary" onclick="mul()">Multiplication</a>
+                </div>
+
+
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="col-sm-3" id="sumvalue" style="font-size:30px; font-weight:bold">
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  
+        function totalsum() {
+           
+            var x = parseInt($("#text1").val());
+            var y = parseInt($("#text2").val());
+            var sum = x + y;
+            $("#sumvalue").html(sum);
+
+        } 
+        function sub() {
+           
+            var x = parseInt($("#text1").val());
+            var y = parseInt($("#text2").val());
+            var sum = x - y;
+            $("#sumvalue").html(sum);
+
+        } function mul() {
+           
+            var x = parseInt($("#text1").val());
+            var y = parseInt($("#text2").val());
+            var sum = x * y;
+            $("#sumvalue").html(sum);
+
+        } 
+
+
+</script>
